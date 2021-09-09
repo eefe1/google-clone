@@ -1,6 +1,9 @@
 import React from 'react';
 import './Home.css';
 import { Link } from "react-router-dom";
+import Search from '../Search';
+import { Avatar } from "@material-ui/core";
+
 
 function Home() {
     return (
@@ -15,9 +18,9 @@ function Home() {
              <div className= 'home__headerRight'></div>
              <Link to= 'gmail'>Gmail</Link>
              <Link to= 'images'>Images</Link>
-              {/* avatar buraya gelecek */}
-
-              {/* appsiconburaya gelecek */}
+             
+             
+             <Avatar />
 
             </div>
 
@@ -27,7 +30,7 @@ function Home() {
             alt=""
             />
             <div className="home__inputContainer">
-                
+            <Search />
             </div>
             </div>
         </div>

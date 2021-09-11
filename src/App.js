@@ -1,27 +1,24 @@
-import React from 'react';
-import './App.css';
-import Home from './pages/Home';
-import { BrowserRouter as Router , Switch , Route } from "react-router-dom";
+import React from "react";
+import "./App.css";
+import Home from "./pages/Home";
+import SearchPage from "./SearchPage";
 
-
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     //BEM
     <div className="app">
-    <Router>
-
-      <Switch>
-      <Route path='/search'>
-        
-        <h1>This is the Search Page</h1>
-      </Route>
-      <Route path='/'>
-        <Home />
-      </Route>
-    
-     </Switch>
-  </Router>
+      <Router>
+        <Switch>
+          <Route path="/search">
+            <SearchPage />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
